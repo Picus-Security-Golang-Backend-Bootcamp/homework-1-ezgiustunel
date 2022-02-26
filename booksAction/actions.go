@@ -8,6 +8,7 @@ import (
 const search = "search"
 const list = "list"
 
+//Method for perform action according to user input on book list.
 func PerformAction(inputList, itemList []string) {
 	if len(inputList) == 1 {
 		PrintMessagesToConsole()
@@ -30,6 +31,7 @@ func PerformAction(inputList, itemList []string) {
 	}
 }
 
+//Method for print the books in the book list.
 func ListBooks(books []string) {
 	fmt.Println()
 	for _, value := range books {
@@ -38,6 +40,7 @@ func ListBooks(books []string) {
 	fmt.Println()
 }
 
+//Method for search books according to given input and prints the matched books
 func SearchBooks(books, keywordList []string) []string {
 	var searchedBooks []string
 
@@ -56,6 +59,7 @@ func SearchBooks(books, keywordList []string) []string {
 	return searchedBooks
 }
 
+//Method for print a list.
 func PrintList(list []string) {
 	fmt.Println()
 	for _, value := range list {
@@ -64,6 +68,7 @@ func PrintList(list []string) {
 	fmt.Println()
 }
 
+//Method for print messages to user in the console.
 func PrintMessagesToConsole() {
 	fmt.Printf("\n--Invalid Input--\n\n")
 	fmt.Println("You can use the methods below to make some actions on book list")
@@ -71,6 +76,7 @@ func PrintMessagesToConsole() {
 	fmt.Printf("search \"bookname\": searches the bookname given in the book list\n\n")
 }
 
+//Method for check if array contains the item or not.
 func Contains(strList []string, str string) bool {
 	for _, value := range strList {
 		if value == str {

@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	//book list
 	books := []string{"Simyaci",
 		"Bab-i Esrar",
 		"Nar Ağaci",
